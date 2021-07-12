@@ -7,7 +7,4 @@ class Subject(models.Model):
     credits = models.IntegerField(max_length=1)
     year = models.IntegerField(max_length=4)
 
-
-    #def set_subject(self, code, name, credits, year):
-
-    # {"code": 2000, "name": "FISICA", "credits": 7, "year": 2019}
+    # EJEMPLO: {"code": 2000, "name": "FISICA", "credits": 7, "year": 2019}

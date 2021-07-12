@@ -1,7 +1,7 @@
 # um-credits
 
 Commands
-"""
+```
 pip install pipenv
 pipenv install django
 pipenv run django-admin startproject server
@@ -12,4 +12,4 @@ pipenv run makemigrations
 pipenv run migrate
 pipenv run createsuperuser
 pipenv run python manage.py runserver
-"""
+```

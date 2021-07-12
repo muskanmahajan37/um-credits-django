@@ -1,1 +1,1 @@
-# um-creits
+# um-credits

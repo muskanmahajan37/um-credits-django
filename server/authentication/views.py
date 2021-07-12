@@ -10,13 +10,18 @@ class LoginView(APIView):
 
     def post(self, request):
         email = request.data.get('email', None)
+        # EJ: {"email": "gianca@gmail.com", "password": "asdasd"}
         password = request.data.get('password', None)
+
         user = authenticate(email=email, password=password)
 
         if user:
             login(request, user)
             return Response(
-                UserSerializer(user).data,
+                {'Username:': UserSerializer(user).data['username'],
+                 'email:': UserSerializer(user).data['email'],
+                 'first_name:': UserSerializer(user).data['first_name'],
+                 'last_name:': UserSerializer(user).data['last_name']},
                 status=status.HTTP_200_OK)
 
         return Response(

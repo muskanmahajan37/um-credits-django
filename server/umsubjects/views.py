@@ -3,7 +3,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 
 from .models import Subject
-from .serializer import SubjectSerializer
+from .serializers import SubjectSerializer
 
 
 class SubjectsView(APIView):

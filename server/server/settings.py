@@ -17,9 +17,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'rest_framework',
-    'authentication',
     'django_rest_passwordreset',
-    'umsubjects',
+    'api',
 ]
 
 MIDDLEWARE = [
@@ -88,4 +87,5 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-AUTH_USER_MODEL = "authentication.CustomUser"
+AUTH_USER_MODEL = "api.User"
+

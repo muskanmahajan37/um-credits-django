@@ -1,9 +1,14 @@
-from rest_framework import status
+from rest_framework import status, viewsets
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from .models import Subject
-from .serializers import SubjectSerializer
+from .models import Subject, User
+from .serializers import UserSerializer, SubjectSerializer
+
+
+class UserViewSet(viewsets.ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
 
 
 class SubjectsView(APIView):

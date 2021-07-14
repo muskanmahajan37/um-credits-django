@@ -59,6 +59,6 @@ list_subjects = [
 status_codes = []
 
 for i in list_subjects:
-    status_codes.append(requests.post(f'http://{ADRESS_IP}:{PORT}/api/add-subject/', data=i))
+    status_codes.append(requests.post(f'http://{ADRESS_IP}:{PORT}/api/subjects/', data=i))
 
 print(status_codes)
